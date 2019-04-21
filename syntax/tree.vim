@@ -1,11 +1,15 @@
 " ============================================================================
 " File: tree.vim
 " Maintainer: https://github.com/EvanQuan/vim-tree/
-" Version: 0.1.0
+" Version: 0.1.1
 "
 " Syntax highlighting for tree files.
 " ============================================================================
 
+if exists("b:current_syntax")
+  finish
+endif
+  
 syntax match treeBranch /[\\/|]/
 syntax match treeCharacter /[a-zA-Z!,.]/
 syntax match treeNumber /[0-9]/
@@ -40,3 +44,4 @@ highlight link treeLessThan Identifier
 highlight link treeEquals Identifier
 highlight link treeNotEquals Identifier
 
+let b:current_syntax = "tree"
